@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Character Count</title>
+
+	<style type="text/css">
+		body {
+			margin: 1em auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		label {
+			display: block;
+			width: 100%;
+		}
+
+		textarea {
+			min-height: 24em;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Character Count</h1>
+
+	<label for="text">Enter your text below.</label>
+	<textarea id="text" autocomplete="off"></textarea>
+
+	<p>You've written <strong><span id="character-count">0</span> characters</strong>.</p>
+
+	<script>
+		const textArea = document.querySelector('#text');
+        const characterCountField = document.querySelector('#character-count');
+
+        const countChars = (e) => {
+            // get what user typed in
+            const string = e.target.value;
+            // convert it into an array
+            const array = string.split('');
+            // get array length - that's number of chars
+            let chars = array.length;
+            // insert chars into DOM
+            characterCountField.textContent = chars;
+        }
+        textArea.addEventListener('input', countChars);
+	</script>
+</body>
+</html>
