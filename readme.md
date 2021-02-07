@@ -4,4 +4,4 @@ The template has a textarea with an ID of #text, and an accompanying label.
 
 The paragraph below it includes a span with an ID of #character-count. It’s set to 0 by default.
 
-As the user types or pastes text into the #text field, the #character-count content should get updated in real time to display how many characters are in the field.
+As the user types or pastes text into the #text field, the #character-count content gets updated in real time to display how many characters are in the field.
